@@ -1,0 +1,3679 @@
+{
+  "model_id": "S1SBMLmodel",
+  "description": "Central metabolism panel based on MitoCore (glycolysis/PPP/TCA/ETC core).",
+  "n_reactions": 50,
+  "n_genes": 147,
+  "reactions": [
+    {
+      "rxn_id": "ACOAHi",
+      "rxn_name": "R_ACOAHi Acetyl-CoA + H2O --> CoA + Acetate",
+      "subsystem": "Acetate production",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "accoa_c",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "coa_c",
+          "met_name": "CoA",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ac_c",
+          "met_name": "Acetate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000172497",
+          "gene_name": "ENSG00000172497",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACOATA",
+      "rxn_name": "R_ACOATA Acetyl-CoA + Acyl-carrier protein --> CoA + Acetyl-[acyl-carrier protein]",
+      "subsystem": "FA synthesis - cytosolic",
+      "stoichiometry": [
+        {
+          "met_id": "accoa_c",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "ACP_c",
+          "met_name": "acyl carrier protein",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_c",
+          "met_name": "CoA",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "acACP_c",
+          "met_name": "Acetyl-ACP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000169710",
+          "gene_name": "ENSG00000169710",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACONT",
+      "rxn_name": "R_ACONT Citrate -> Isocitrate",
+      "subsystem": "Reductive carboxylation",
+      "stoichiometry": [
+        {
+          "met_id": "cit_c",
+          "met_name": "Citrate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "icit_c",
+          "met_name": "Isocitrate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000122729",
+          "gene_name": "ENSG00000122729",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACONTm",
+      "rxn_name": "R_ACONTm Citrate -> Isocitrate",
+      "subsystem": "TCA cycle",
+      "stoichiometry": [
+        {
+          "met_id": "cit_m",
+          "met_name": "Citrate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "icit_m",
+          "met_name": "Isocitrate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000100412",
+          "gene_name": "ENSG00000100412",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACOT2_MitoCore",
+      "rxn_name": "R_ACOT2_MitoCore Palmitoyl-CoA + H2O --> CoA + Hexadecanoic acid",
+      "subsystem": "Fatty acid elongation in mitochondria",
+      "stoichiometry": [
+        {
+          "met_id": "pmtcoa_m",
+          "met_name": "Palmitoyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_m",
+          "met_name": "CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "hdca_m",
+          "met_name": "Hexadecanoic acid",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000119673",
+          "gene_name": "ENSG00000119673",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACS",
+      "rxn_name": "R_ACS ATP + Acetate + CoA --> AMP + Diphosphate + Acetyl-CoA",
+      "subsystem": "Alcohol metabolism",
+      "stoichiometry": [
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_c",
+          "met_name": "CoA",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "ac_c",
+          "met_name": "Acetate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "accoa_c",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "amp_c",
+          "met_name": "AMP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ppi_c",
+          "met_name": "Diphosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000131069",
+          "gene_name": "ENSG00000131069",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ACSm",
+      "rxn_name": "R_ACSm ATP + Acetate + CoA --> AMP + Diphosphate + Acetyl-CoA",
+      "subsystem": "Alcohol metabolism",
+      "stoichiometry": [
+        {
+          "met_id": "atp_m",
+          "met_name": "ATP",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_m",
+          "met_name": "CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "ac_m",
+          "met_name": "Acetate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "accoa_m",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "amp_m",
+          "met_name": "AMP",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ppi_m",
+          "met_name": "Diphosphate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000154930",
+          "gene_name": "ENSG00000154930",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ADSL1",
+      "rxn_name": "R_ADSL1 N6-(1,2-Dicarboxyethyl)-AMP --> Fumarate + AMP",
+      "subsystem": "Purine Nucleotide Cycle",
+      "stoichiometry": [
+        {
+          "met_id": "dcamp_c",
+          "met_name": "N6-(1,2-Dicarboxyethyl)-AMP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "amp_c",
+          "met_name": "AMP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "fum_c",
+          "met_name": "Fumarate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000239900",
+          "gene_name": "ENSG00000239900",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ARGSL",
+      "rxn_name": "R_ARGSL N-(L-Arginino)succinate --> Fumarate + L-Arginine",
+      "subsystem": "Urea Cycle",
+      "stoichiometry": [
+        {
+          "met_id": "argsuc_c",
+          "met_name": "N-(L-Arginino)succinate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "fum_c",
+          "met_name": "Fumarate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "arg_L_c",
+          "met_name": "L-Arginine",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000126522",
+          "gene_name": "ENSG00000126522",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "CII_MitoCore",
+      "rxn_name": "R_CII_MitoCore succinate dehydrogenase",
+      "subsystem": "Electron transport chain CII",
+      "stoichiometry": [
+        {
+          "met_id": "q10_m",
+          "met_name": "Ubiquinone",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "succ_m",
+          "met_name": "Succinate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "q10h2_m",
+          "met_name": "Ubiquinol",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "fum_m",
+          "met_name": "Fumarate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000143252",
+          "gene_name": "ENSG00000143252",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000117118",
+          "gene_name": "ENSG00000117118",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000073578",
+          "gene_name": "ENSG00000073578",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "CIV_MitoCore",
+      "rxn_name": "R_CIV_MitoCore cytochrome c oxidase",
+      "subsystem": "Electron transport chain CIV",
+      "stoichiometry": [
+        {
+          "met_id": "o2_m",
+          "met_name": "Oxygen",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "focytC_m",
+          "met_name": "Ferrocytochrome c",
+          "compartment": "Mitochondrion",
+          "coeff": -4.0
+        },
+        {
+          "met_id": "PMF_m",
+          "met_name": "Proton Motive Force",
+          "compartment": "Mitochondrion",
+          "coeff": -8.0
+        },
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": 2.0
+        },
+        {
+          "met_id": "PMF_c",
+          "met_name": "Proton Motive Force",
+          "compartment": "Cytosol",
+          "coeff": 4.0
+        },
+        {
+          "met_id": "ficytC_m",
+          "met_name": "Ferricytochrome c",
+          "compartment": "Mitochondrion",
+          "coeff": 4.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000187581",
+          "gene_name": "ENSG00000187581",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000160471",
+          "gene_name": "ENSG00000160471",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000131143",
+          "gene_name": "ENSG00000131143",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000112695",
+          "gene_name": "ENSG00000112695",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000176340",
+          "gene_name": "ENSG00000176340",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198938",
+          "gene_name": "ENSG00000198938",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198804",
+          "gene_name": "ENSG00000198804",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000164919",
+          "gene_name": "ENSG00000164919",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000131174",
+          "gene_name": "ENSG00000131174",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000111775",
+          "gene_name": "ENSG00000111775",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000115944",
+          "gene_name": "ENSG00000115944",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000161281",
+          "gene_name": "ENSG00000161281",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000131055",
+          "gene_name": "ENSG00000131055",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000127184",
+          "gene_name": "ENSG00000127184",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000126267",
+          "gene_name": "ENSG00000126267",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198712",
+          "gene_name": "ENSG00000198712",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000135940",
+          "gene_name": "ENSG00000135940",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000156885",
+          "gene_name": "ENSG00000156885",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000178741",
+          "gene_name": "ENSG00000178741",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "CI_MitoCore",
+      "rxn_name": "R_CI_MitoCore NADH dehydrogenase",
+      "subsystem": "Electron transport chain CI",
+      "stoichiometry": [
+        {
+          "met_id": "h_m",
+          "met_name": "H",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "PMF_m",
+          "met_name": "Proton Motive Force",
+          "compartment": "Mitochondrion",
+          "coeff": -3.996
+        },
+        {
+          "met_id": "nadh_m",
+          "met_name": "NADH",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "q10_m",
+          "met_name": "Ubiquinone",
+          "compartment": "Mitochondrion",
+          "coeff": -0.999
+        },
+        {
+          "met_id": "o2_m",
+          "met_name": "Oxygen",
+          "compartment": "Mitochondrion",
+          "coeff": -0.002
+        },
+        {
+          "met_id": "PMF_c",
+          "met_name": "Proton Motive Force",
+          "compartment": "Cytosol",
+          "coeff": 3.996
+        },
+        {
+          "met_id": "nad_m",
+          "met_name": "NAD",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "q10h2_m",
+          "met_name": "Ubiquinol",
+          "compartment": "Mitochondrion",
+          "coeff": 0.999
+        },
+        {
+          "met_id": "o2s_m",
+          "met_name": "O2.-",
+          "compartment": "Mitochondrion",
+          "coeff": 0.002
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000267855",
+          "gene_name": "ENSG00000267855",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000110717",
+          "gene_name": "ENSG00000110717",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000023228",
+          "gene_name": "ENSG00000023228",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198786",
+          "gene_name": "ENSG00000198786",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000167792",
+          "gene_name": "ENSG00000167792",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000109390",
+          "gene_name": "ENSG00000109390",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000147123",
+          "gene_name": "ENSG00000147123",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000140990",
+          "gene_name": "ENSG00000140990",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000174886",
+          "gene_name": "ENSG00000174886",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000065518",
+          "gene_name": "ENSG00000065518",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000145494",
+          "gene_name": "ENSG00000145494",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000139180",
+          "gene_name": "ENSG00000139180",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000185633",
+          "gene_name": "ENSG00000185633",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000128609",
+          "gene_name": "ENSG00000128609",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000184983",
+          "gene_name": "ENSG00000184983",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198763",
+          "gene_name": "ENSG00000198763",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000189043",
+          "gene_name": "ENSG00000189043",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000186010",
+          "gene_name": "ENSG00000186010",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000136521",
+          "gene_name": "ENSG00000136521",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000183648",
+          "gene_name": "ENSG00000183648",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198886",
+          "gene_name": "ENSG00000198886",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000004779",
+          "gene_name": "ENSG00000004779",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198695",
+          "gene_name": "ENSG00000198695",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000184752",
+          "gene_name": "ENSG00000184752",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000151366",
+          "gene_name": "ENSG00000151366",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000147684",
+          "gene_name": "ENSG00000147684",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198888",
+          "gene_name": "ENSG00000198888",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000178127",
+          "gene_name": "ENSG00000178127",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000158864",
+          "gene_name": "ENSG00000158864",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198840",
+          "gene_name": "ENSG00000198840",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000170906",
+          "gene_name": "ENSG00000170906",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000090266",
+          "gene_name": "ENSG00000090266",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000130414",
+          "gene_name": "ENSG00000130414",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000168653",
+          "gene_name": "ENSG00000168653",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000160194",
+          "gene_name": "ENSG00000160194",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000213619",
+          "gene_name": "ENSG00000213619",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000131495",
+          "gene_name": "ENSG00000131495",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000166136",
+          "gene_name": "ENSG00000166136",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000165264",
+          "gene_name": "ENSG00000165264",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000164258",
+          "gene_name": "ENSG00000164258",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000119421",
+          "gene_name": "ENSG00000119421",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000212907",
+          "gene_name": "ENSG00000212907",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000099795",
+          "gene_name": "ENSG00000099795",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000115286",
+          "gene_name": "ENSG00000115286",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000119013",
+          "gene_name": "ENSG00000119013",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "CSm",
+      "rxn_name": "R_CSm Acetyl-CoA + H2O + Oxaloacetate --> Citrate + CoA",
+      "subsystem": "TCA cycle",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "accoa_m",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "oaa_m",
+          "met_name": "Oxaloacetate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_m",
+          "met_name": "H",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "coa_m",
+          "met_name": "CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "cit_m",
+          "met_name": "Citrate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000062485",
+          "gene_name": "ENSG00000062485",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "CV_MitoCore",
+      "rxn_name": "R_CV_MitoCore ATP synthase",
+      "subsystem": "Electron transport chain CV",
+      "stoichiometry": [
+        {
+          "met_id": "h_m",
+          "met_name": "H",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "PMF_c",
+          "met_name": "Proton Motive Force",
+          "compartment": "Cytosol",
+          "coeff": -2.7
+        },
+        {
+          "met_id": "adp_m",
+          "met_name": "ADP",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pi_m",
+          "met_name": "Orthophosphate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "PMF_m",
+          "met_name": "Proton Motive Force",
+          "compartment": "Mitochondrion",
+          "coeff": 2.7
+        },
+        {
+          "met_id": "atp_m",
+          "met_name": "ATP",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000159199",
+          "gene_name": "ENSG00000159199",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000099624",
+          "gene_name": "ENSG00000099624",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000241837",
+          "gene_name": "ENSG00000241837",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000169020",
+          "gene_name": "ENSG00000169020",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000165629",
+          "gene_name": "ENSG00000165629",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000116459",
+          "gene_name": "ENSG00000116459",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000124172",
+          "gene_name": "ENSG00000124172",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000152234",
+          "gene_name": "ENSG00000152234",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000228253",
+          "gene_name": "ENSG00000228253",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000110955",
+          "gene_name": "ENSG00000110955",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000154518",
+          "gene_name": "ENSG00000154518",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000198899",
+          "gene_name": "ENSG00000198899",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000167283",
+          "gene_name": "ENSG00000167283",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000249222",
+          "gene_name": "ENSG00000249222",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000154723",
+          "gene_name": "ENSG00000154723",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000167863",
+          "gene_name": "ENSG00000167863",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000241468",
+          "gene_name": "ENSG00000241468",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000135390",
+          "gene_name": "ENSG00000135390",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "ENO",
+      "rxn_name": "R_ENO 2-Phospho-D-glycerate --> Phosphoenolpyruvate + H2O",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "2pg_c",
+          "met_name": "2-Phospho-D-glycerate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "pep_c",
+          "met_name": "Phosphoenolpyruvate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000074800",
+          "gene_name": "ENSG00000074800",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000111674",
+          "gene_name": "ENSG00000111674",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000108515",
+          "gene_name": "ENSG00000108515",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FACOAL160i",
+      "rxn_name": "R_FACOAL160i ATP + Hexadecanoic acid + CoA --> AMP + Palmitoyl-CoA + Diphosphate",
+      "subsystem": "Carnitine shuttle",
+      "stoichiometry": [
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_c",
+          "met_name": "CoA",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "hdca_c",
+          "met_name": "Hexadecanoic acid",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "amp_c",
+          "met_name": "AMP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ppi_c",
+          "met_name": "Diphosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "pmtcoa_c",
+          "met_name": "Palmitoyl-CoA",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000151726",
+          "gene_name": "ENSG00000151726",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000197142",
+          "gene_name": "ENSG00000197142",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000164398",
+          "gene_name": "ENSG00000164398",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000068366",
+          "gene_name": "ENSG00000068366",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000123983",
+          "gene_name": "ENSG00000123983",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000103740",
+          "gene_name": "ENSG00000103740",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000130377",
+          "gene_name": "ENSG00000130377",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FACOAL40im",
+      "rxn_name": "R_FACOAL40im ATP + Butanoic acid + CoA --> AMP + Diphosphate + Butanoyl-CoA",
+      "subsystem": "Butanoate metabolism",
+      "stoichiometry": [
+        {
+          "met_id": "atp_m",
+          "met_name": "ATP",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_m",
+          "met_name": "CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "but_m",
+          "met_name": "Butanoic acid",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "amp_m",
+          "met_name": "AMP",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ppi_m",
+          "met_name": "Diphosphate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "btcoa_m",
+          "met_name": "Butanoyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000173124",
+          "gene_name": "ENSG00000173124",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000005187",
+          "gene_name": "ENSG00000005187",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FBA",
+      "rxn_name": "R_FBA beta-D-Fructose 1,6-bisphosphate --> Glycerone phosphate + D-Glyceraldehyde 3-phosphate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "fdp_c",
+          "met_name": "D-Fructose 1,6-bisphosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "dhap_c",
+          "met_name": "Glycerone phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000149925",
+          "gene_name": "ENSG00000149925",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000109107",
+          "gene_name": "ENSG00000109107",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FBP",
+      "rxn_name": "R_FBP beta-D-Fructose 1,6-bisphosphate + H2O --> beta-D-Fructose 6-phosphate + Orthophosphate",
+      "subsystem": "Gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "fdp_c",
+          "met_name": "D-Fructose 1,6-bisphosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pi_c",
+          "met_name": "Orthophosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "f6p_c",
+          "met_name": "D-Fructose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000165140",
+          "gene_name": "ENSG00000165140",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000130957",
+          "gene_name": "ENSG00000130957",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FUM",
+      "rxn_name": "R_FUM Fumarate + H2O --> (S)-Malate",
+      "subsystem": "Cytosolic misc",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "fum_c",
+          "met_name": "Fumarate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "mal_L_c",
+          "met_name": "(S)-Malate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000091483",
+          "gene_name": "ENSG00000091483",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FUMAC",
+      "rxn_name": "R_FUMAC 4-Fumarylacetoacetate + H2O --> Acetoacetate + Fumarate",
+      "subsystem": "Tyrosine degradation",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "4fumacac_c",
+          "met_name": "4-Fumarylacetoacetate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "acac_c",
+          "met_name": "Acetoacetate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "fum_c",
+          "met_name": "Fumarate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000103876",
+          "gene_name": "ENSG00000103876",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FUMm",
+      "rxn_name": "R_FUMm Fumarate + H2O --> (S)-Malate",
+      "subsystem": "TCA cycle",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "fum_m",
+          "met_name": "Fumarate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "mal_L_m",
+          "met_name": "(S)-Malate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000091483",
+          "gene_name": "ENSG00000091483",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "FUMtmB_MitoCore",
+      "rxn_name": "R_FUMtmB_MitoCore Fumarate transport",
+      "subsystem": "Mitochondrial transporters - uncharacterised",
+      "stoichiometry": [
+        {
+          "met_id": "fum_c",
+          "met_name": "Fumarate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "PMF_m",
+          "met_name": "Proton Motive Force",
+          "compartment": "Mitochondrion",
+          "coeff": -1.64
+        },
+        {
+          "met_id": "fum_m",
+          "met_name": "Fumarate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "PMF_c",
+          "met_name": "Proton Motive Force",
+          "compartment": "Cytosol",
+          "coeff": 1.64
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "Unknown",
+          "gene_name": "Unknown",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "G6PDH2r",
+      "rxn_name": "R_G6PDH2r beta-D-Glucose 6-phosphate + NADP+ --> D-Glucono-1,5-lactone 6-phosphate + NADPH + H+",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "nadp_c",
+          "met_name": "NADP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g6p_c",
+          "met_name": "D-Glucose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "nadph_c",
+          "met_name": "NADPH",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "6pgl_c",
+          "met_name": "D-Glucono-1,5-lactone 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000160211",
+          "gene_name": "ENSG00000160211",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "G6PPer",
+      "rxn_name": "R_G6PPer alpha-D-Glucose 6-phosphate + H2O --> alpha-D-Glucose + Orthophosphate",
+      "subsystem": "Gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g6p_c",
+          "met_name": "D-Glucose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pi_c",
+          "met_name": "Orthophosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "glc_D_c",
+          "met_name": "D-Glucose",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000131482",
+          "gene_name": "ENSG00000131482",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "GAPD",
+      "rxn_name": "R_GAPD D-Glyceraldehyde 3-phosphate + Orthophosphate + NAD+ --> 3-Phospho-D-glyceroyl phosphate + NADH + H+",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "pi_c",
+          "met_name": "Orthophosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "nad_c",
+          "met_name": "NAD",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "nadh_c",
+          "met_name": "NADH",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "13dpg_c",
+          "met_name": "3-Phospho-D-glyceroyl phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000111640",
+          "gene_name": "ENSG00000111640",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "GND",
+      "rxn_name": "R_GND 6-Phospho-D-gluconate + NADP+ --> D-Ribulose 5-phosphate + CO2 + NADPH + H+",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "nadp_c",
+          "met_name": "NADP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "6pgc_c",
+          "met_name": "6-Phospho-D-gluconate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "nadph_c",
+          "met_name": "NADPH",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "co2_c",
+          "met_name": "CO2",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "ru5p_D_c",
+          "met_name": "D-Ribulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000142657",
+          "gene_name": "ENSG00000142657",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "HEX1",
+      "rxn_name": "R_HEX1 ATP + alpha-D-Glucose --> ADP + alpha-D-Glucose 6-phosphate",
+      "subsystem": "Glycolysis",
+      "stoichiometry": [
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "glc_D_c",
+          "met_name": "D-Glucose",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "adp_c",
+          "met_name": "ADP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "g6p_c",
+          "met_name": "D-Glucose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000156515",
+          "gene_name": "ENSG00000156515",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000160883",
+          "gene_name": "ENSG00000160883",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000159399",
+          "gene_name": "ENSG00000159399",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000106633",
+          "gene_name": "ENSG00000106633",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "LDH_L",
+      "rxn_name": "R_LDH_L (S)-Lactate + NAD+ --> Pyruvate + NADH + H+",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "nad_c",
+          "met_name": "NAD",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "lac_L_c",
+          "met_name": "(S)-Lactate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pyr_c",
+          "met_name": "Pyruvate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "nadh_c",
+          "met_name": "NADH",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000111716",
+          "gene_name": "ENSG00000111716",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "MACACI",
+      "rxn_name": "R_MACACI 4-Maleylacetoacetate --> 4-Fumarylacetoacetate",
+      "subsystem": "Tyrosine degradation",
+      "stoichiometry": [
+        {
+          "met_id": "4mlacac_c",
+          "met_name": "4-Maleylacetoacetate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "4fumacac_c",
+          "met_name": "4-Fumarylacetoacetate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000100577",
+          "gene_name": "ENSG00000100577",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "MCCCrm",
+      "rxn_name": "R_MCCCrm ATP + 3-Methylcrotonyl-CoA + HCO3 ---> ADP + Orthophosphate + 3-Methylglutaconyl-CoA",
+      "subsystem": "Leucine degradation",
+      "stoichiometry": [
+        {
+          "met_id": "atp_m",
+          "met_name": "ATP",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "hco3_m",
+          "met_name": "HCO3-",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "3mb2coa_m",
+          "met_name": "3-Methylcrotonyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_m",
+          "met_name": "H",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "adp_m",
+          "met_name": "ADP",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "pi_m",
+          "met_name": "Orthophosphate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "3mgcoa_m",
+          "met_name": "3-Methylglutaconyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000131844",
+          "gene_name": "ENSG00000131844",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000078070",
+          "gene_name": "ENSG00000078070",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "MDH",
+      "rxn_name": "R_MDH (S)-Malate + NAD+ --> Oxaloacetate + NADH + H+",
+      "subsystem": "Malate aspartate shuttle",
+      "stoichiometry": [
+        {
+          "met_id": "nad_c",
+          "met_name": "NAD",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "mal_L_c",
+          "met_name": "(S)-Malate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "nadh_c",
+          "met_name": "NADH",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "oaa_c",
+          "met_name": "Oxaloacetate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000014641",
+          "gene_name": "ENSG00000014641",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "MDHm",
+      "rxn_name": "R_MDHm (S)-Malate + NAD+ --> Oxaloacetate + NADH + H+",
+      "subsystem": "TCA cycle",
+      "stoichiometry": [
+        {
+          "met_id": "nad_m",
+          "met_name": "NAD",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "mal_L_m",
+          "met_name": "(S)-Malate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_m",
+          "met_name": "H",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "nadh_m",
+          "met_name": "NADH",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "oaa_m",
+          "met_name": "Oxaloacetate",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000146701",
+          "gene_name": "ENSG00000146701",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "MGCHrm",
+      "rxn_name": "R_MGCHrm 3-Methylglutaconyl-CoA + H2O --> (S)-3-Hydroxy-3-methylglutaryl-CoA",
+      "subsystem": "Leucine degradation",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_m",
+          "met_name": "H2O",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "3mgcoa_m",
+          "met_name": "3-Methylglutaconyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "hmgcoa_m",
+          "met_name": "(S)-3-Hydroxy-3-methylglutaryl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000148090",
+          "gene_name": "ENSG00000148090",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PDHm",
+      "rxn_name": "R_PDHm Pyruvate + CoA + NAD+ --> Acetyl-CoA + CO2 + NADH + H+",
+      "subsystem": "TCA cycle",
+      "stoichiometry": [
+        {
+          "met_id": "nad_m",
+          "met_name": "NAD",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pyr_m",
+          "met_name": "Pyruvate",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "coa_m",
+          "met_name": "CoA",
+          "compartment": "Mitochondrion",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "nadh_m",
+          "met_name": "NADH",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "co2_m",
+          "met_name": "CO2",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "accoa_m",
+          "met_name": "Acetyl-CoA",
+          "compartment": "Mitochondrion",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000091140",
+          "gene_name": "ENSG00000091140",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000131828",
+          "gene_name": "ENSG00000131828",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000168291",
+          "gene_name": "ENSG00000168291",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000150768",
+          "gene_name": "ENSG00000150768",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PEPCK",
+      "rxn_name": "R_PEPCK GTP + oxaloacetate --> GDP + phosphoenolpyruvate + CO2",
+      "subsystem": "Gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "oaa_c",
+          "met_name": "Oxaloacetate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "gtp_c",
+          "met_name": "GTP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "co2_c",
+          "met_name": "CO2",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "pep_c",
+          "met_name": "Phosphoenolpyruvate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "gdp_c",
+          "met_name": "GDP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000124253",
+          "gene_name": "ENSG00000124253",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PFK",
+      "rxn_name": "R_PFK ATP + beta-D-Fructose 6-phosphate --> ADP + beta-D-Fructose 1,6-bisphosphate",
+      "subsystem": "Glycolysis",
+      "stoichiometry": [
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "f6p_c",
+          "met_name": "D-Fructose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "adp_c",
+          "met_name": "ADP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "fdp_c",
+          "met_name": "D-Fructose 1,6-bisphosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000152556",
+          "gene_name": "ENSG00000152556",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PGI",
+      "rxn_name": "R_PGI alpha-D-Glucose 6-phosphate --> beta-D-Fructose 6-phosphate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "g6p_c",
+          "met_name": "D-Glucose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "f6p_c",
+          "met_name": "D-Fructose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000105220",
+          "gene_name": "ENSG00000105220",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PGK",
+      "rxn_name": "R_PGK ATP + 3-Phospho-D-glycerate --> ADP + 3-Phospho-D-glyceroyl phosphate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "3pg_c",
+          "met_name": "3-Phospho-D-glycerate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "adp_c",
+          "met_name": "ADP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "13dpg_c",
+          "met_name": "3-Phospho-D-glyceroyl phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000102144",
+          "gene_name": "ENSG00000102144",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PGL",
+      "rxn_name": "R_PGL D-Glucono-1,5-lactone 6-phosphate + H2O --> 6-Phospho-D-gluconate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "6pgl_c",
+          "met_name": "D-Glucono-1,5-lactone 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "6pgc_c",
+          "met_name": "6-Phospho-D-gluconate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000130313",
+          "gene_name": "ENSG00000130313",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PGM",
+      "rxn_name": "R_PGM 2-Phospho-D-glycerate --> 3-Phospho-D-glycerate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "2pg_c",
+          "met_name": "2-Phospho-D-glycerate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "3pg_c",
+          "met_name": "3-Phospho-D-glycerate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000171314",
+          "gene_name": "ENSG00000171314",
+          "annotation": {}
+        },
+        {
+          "gene_id": "ENSG00000164708",
+          "gene_name": "ENSG00000164708",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PPD2CSPc_MitoCore",
+      "rxn_name": "R_PPD2CSPc_MitoCore 6-Amino-2-oxohexanoate --> delta1-Piperideine-2-carboxylate + H2O",
+      "subsystem": "Lysine degradation (L-pipecolate pathway)",
+      "stoichiometry": [
+        {
+          "met_id": "6a2ohxnt_c",
+          "met_name": "6-Amino-2-oxohexanoate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h2o_c",
+          "met_name": "H2O",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "1pipdn2c_c",
+          "met_name": "delta1-Piperideine-2-carboxylate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "Non-Enzymatic",
+          "gene_name": "Non-Enzymatic",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "PYK",
+      "rxn_name": "R_PYK ADP + Phosphoenolpyruvate --> ATP + Pyruvate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "pep_c",
+          "met_name": "Phosphoenolpyruvate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "adp_c",
+          "met_name": "ADP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "atp_c",
+          "met_name": "ATP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "pyr_c",
+          "met_name": "Pyruvate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000067225",
+          "gene_name": "ENSG00000067225",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "RPE",
+      "rxn_name": "R_RPE D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "ru5p_D_c",
+          "met_name": "D-Ribulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "xu5p_D_c",
+          "met_name": "D-Xylulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000235376",
+          "gene_name": "ENSG00000235376",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "RPI",
+      "rxn_name": "R_RPI D-Ribose 5-phosphate --> D-Ribulose 5-phosphate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "r5p_c",
+          "met_name": "D-Ribose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "ru5p_D_c",
+          "met_name": "D-Ribulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000153574",
+          "gene_name": "ENSG00000153574",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "TALA",
+      "rxn_name": "R_TALA Sedoheptulose 7-phosphate + D-Glyceraldehyde 3-phosphate --> D-Erythrose 4-phosphate + beta-D-Fructose 6-phosphate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "s7p_c",
+          "met_name": "Sedoheptulose 7-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "f6p_c",
+          "met_name": "D-Fructose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "e4p_c",
+          "met_name": "D-Erythrose 4-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000177156",
+          "gene_name": "ENSG00000177156",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "TKT1",
+      "rxn_name": "R_TKT1 D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> Sedoheptulose 7-phosphate + D-Glyceraldehyde 3-phosphate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "r5p_c",
+          "met_name": "D-Ribose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "xu5p_D_c",
+          "met_name": "D-Xylulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "s7p_c",
+          "met_name": "Sedoheptulose 7-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000163931",
+          "gene_name": "ENSG00000163931",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "TKT2",
+      "rxn_name": "R_TKT2 D-Erythrose 4-phosphate + D-Xylulose 5-phosphate --> beta-D-Fructose 6-phosphate + D-Glyceraldehyde 3-phosphate",
+      "subsystem": "Pentose phosphate pathway",
+      "stoichiometry": [
+        {
+          "met_id": "xu5p_D_c",
+          "met_name": "D-Xylulose 5-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "e4p_c",
+          "met_name": "D-Erythrose 4-phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "f6p_c",
+          "met_name": "D-Fructose 6-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000163931",
+          "gene_name": "ENSG00000163931",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "TPI",
+      "rxn_name": "R_TPI D-Glyceraldehyde 3-phosphate --> Glycerone phosphate",
+      "subsystem": "Glycolysis/gluconeogenesis",
+      "stoichiometry": [
+        {
+          "met_id": "dhap_c",
+          "met_name": "Glycerone phosphate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "g3p_c",
+          "met_name": "D-Glyceraldehyde 3-phosphate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000111669",
+          "gene_name": "ENSG00000111669",
+          "annotation": {}
+        }
+      ]
+    },
+    {
+      "rxn_id": "r0122",
+      "rxn_name": "R_r0122  GDP + Phosphoenolpyruvate --> GTP + Pyruvate",
+      "subsystem": "Glycolysis",
+      "stoichiometry": [
+        {
+          "met_id": "h_c",
+          "met_name": "H",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pep_c",
+          "met_name": "Phosphoenolpyruvate",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "gdp_c",
+          "met_name": "GDP",
+          "compartment": "Cytosol",
+          "coeff": -1.0
+        },
+        {
+          "met_id": "pyr_c",
+          "met_name": "Pyruvate",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        },
+        {
+          "met_id": "gtp_c",
+          "met_name": "GTP",
+          "compartment": "Cytosol",
+          "coeff": 1.0
+        }
+      ],
+      "genes": [
+        {
+          "gene_id": "ENSG00000067225",
+          "gene_name": "ENSG00000067225",
+          "annotation": {}
+        }
+      ]
+    }
+  ],
+  "genes": [
+    {
+      "gene_id": "ENSG00000172497",
+      "gene_name": "ENSG00000172497",
+      "annotation": {},
+      "reactions": [
+        "ACOAHi"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000169710",
+      "gene_name": "ENSG00000169710",
+      "annotation": {},
+      "reactions": [
+        "ACOATA"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000122729",
+      "gene_name": "ENSG00000122729",
+      "annotation": {},
+      "reactions": [
+        "ACONT"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000100412",
+      "gene_name": "ENSG00000100412",
+      "annotation": {},
+      "reactions": [
+        "ACONTm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000119673",
+      "gene_name": "ENSG00000119673",
+      "annotation": {},
+      "reactions": [
+        "ACOT2_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131069",
+      "gene_name": "ENSG00000131069",
+      "annotation": {},
+      "reactions": [
+        "ACS"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000154930",
+      "gene_name": "ENSG00000154930",
+      "annotation": {},
+      "reactions": [
+        "ACSm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000239900",
+      "gene_name": "ENSG00000239900",
+      "annotation": {},
+      "reactions": [
+        "ADSL1"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000126522",
+      "gene_name": "ENSG00000126522",
+      "annotation": {},
+      "reactions": [
+        "ARGSL"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000143252",
+      "gene_name": "ENSG00000143252",
+      "annotation": {},
+      "reactions": [
+        "CII_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000117118",
+      "gene_name": "ENSG00000117118",
+      "annotation": {},
+      "reactions": [
+        "CII_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000073578",
+      "gene_name": "ENSG00000073578",
+      "annotation": {},
+      "reactions": [
+        "CII_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000187581",
+      "gene_name": "ENSG00000187581",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000160471",
+      "gene_name": "ENSG00000160471",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131143",
+      "gene_name": "ENSG00000131143",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000112695",
+      "gene_name": "ENSG00000112695",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000176340",
+      "gene_name": "ENSG00000176340",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198938",
+      "gene_name": "ENSG00000198938",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198804",
+      "gene_name": "ENSG00000198804",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000164919",
+      "gene_name": "ENSG00000164919",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131174",
+      "gene_name": "ENSG00000131174",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000111775",
+      "gene_name": "ENSG00000111775",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000115944",
+      "gene_name": "ENSG00000115944",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000161281",
+      "gene_name": "ENSG00000161281",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131055",
+      "gene_name": "ENSG00000131055",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000127184",
+      "gene_name": "ENSG00000127184",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000126267",
+      "gene_name": "ENSG00000126267",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198712",
+      "gene_name": "ENSG00000198712",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000135940",
+      "gene_name": "ENSG00000135940",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000156885",
+      "gene_name": "ENSG00000156885",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000178741",
+      "gene_name": "ENSG00000178741",
+      "annotation": {},
+      "reactions": [
+        "CIV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000267855",
+      "gene_name": "ENSG00000267855",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000110717",
+      "gene_name": "ENSG00000110717",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000023228",
+      "gene_name": "ENSG00000023228",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198786",
+      "gene_name": "ENSG00000198786",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000167792",
+      "gene_name": "ENSG00000167792",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000109390",
+      "gene_name": "ENSG00000109390",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000147123",
+      "gene_name": "ENSG00000147123",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000140990",
+      "gene_name": "ENSG00000140990",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000174886",
+      "gene_name": "ENSG00000174886",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000065518",
+      "gene_name": "ENSG00000065518",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000145494",
+      "gene_name": "ENSG00000145494",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000139180",
+      "gene_name": "ENSG00000139180",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000185633",
+      "gene_name": "ENSG00000185633",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000128609",
+      "gene_name": "ENSG00000128609",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000184983",
+      "gene_name": "ENSG00000184983",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198763",
+      "gene_name": "ENSG00000198763",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000189043",
+      "gene_name": "ENSG00000189043",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000186010",
+      "gene_name": "ENSG00000186010",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000136521",
+      "gene_name": "ENSG00000136521",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000183648",
+      "gene_name": "ENSG00000183648",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198886",
+      "gene_name": "ENSG00000198886",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000004779",
+      "gene_name": "ENSG00000004779",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198695",
+      "gene_name": "ENSG00000198695",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000184752",
+      "gene_name": "ENSG00000184752",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000151366",
+      "gene_name": "ENSG00000151366",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000147684",
+      "gene_name": "ENSG00000147684",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198888",
+      "gene_name": "ENSG00000198888",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000178127",
+      "gene_name": "ENSG00000178127",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000158864",
+      "gene_name": "ENSG00000158864",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198840",
+      "gene_name": "ENSG00000198840",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000170906",
+      "gene_name": "ENSG00000170906",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000090266",
+      "gene_name": "ENSG00000090266",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000130414",
+      "gene_name": "ENSG00000130414",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000168653",
+      "gene_name": "ENSG00000168653",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000160194",
+      "gene_name": "ENSG00000160194",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000213619",
+      "gene_name": "ENSG00000213619",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131495",
+      "gene_name": "ENSG00000131495",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000166136",
+      "gene_name": "ENSG00000166136",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000165264",
+      "gene_name": "ENSG00000165264",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000164258",
+      "gene_name": "ENSG00000164258",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000119421",
+      "gene_name": "ENSG00000119421",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000212907",
+      "gene_name": "ENSG00000212907",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000099795",
+      "gene_name": "ENSG00000099795",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000115286",
+      "gene_name": "ENSG00000115286",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000119013",
+      "gene_name": "ENSG00000119013",
+      "annotation": {},
+      "reactions": [
+        "CI_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000062485",
+      "gene_name": "ENSG00000062485",
+      "annotation": {},
+      "reactions": [
+        "CSm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000159199",
+      "gene_name": "ENSG00000159199",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000099624",
+      "gene_name": "ENSG00000099624",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000241837",
+      "gene_name": "ENSG00000241837",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000169020",
+      "gene_name": "ENSG00000169020",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000165629",
+      "gene_name": "ENSG00000165629",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000116459",
+      "gene_name": "ENSG00000116459",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000124172",
+      "gene_name": "ENSG00000124172",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000152234",
+      "gene_name": "ENSG00000152234",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000228253",
+      "gene_name": "ENSG00000228253",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000110955",
+      "gene_name": "ENSG00000110955",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000154518",
+      "gene_name": "ENSG00000154518",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000198899",
+      "gene_name": "ENSG00000198899",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000167283",
+      "gene_name": "ENSG00000167283",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000249222",
+      "gene_name": "ENSG00000249222",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000154723",
+      "gene_name": "ENSG00000154723",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000167863",
+      "gene_name": "ENSG00000167863",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000241468",
+      "gene_name": "ENSG00000241468",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000135390",
+      "gene_name": "ENSG00000135390",
+      "annotation": {},
+      "reactions": [
+        "CV_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000074800",
+      "gene_name": "ENSG00000074800",
+      "annotation": {},
+      "reactions": [
+        "ENO"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000111674",
+      "gene_name": "ENSG00000111674",
+      "annotation": {},
+      "reactions": [
+        "ENO"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000108515",
+      "gene_name": "ENSG00000108515",
+      "annotation": {},
+      "reactions": [
+        "ENO"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000151726",
+      "gene_name": "ENSG00000151726",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000197142",
+      "gene_name": "ENSG00000197142",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000164398",
+      "gene_name": "ENSG00000164398",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000068366",
+      "gene_name": "ENSG00000068366",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000123983",
+      "gene_name": "ENSG00000123983",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000103740",
+      "gene_name": "ENSG00000103740",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000130377",
+      "gene_name": "ENSG00000130377",
+      "annotation": {},
+      "reactions": [
+        "FACOAL160i"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000173124",
+      "gene_name": "ENSG00000173124",
+      "annotation": {},
+      "reactions": [
+        "FACOAL40im"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000005187",
+      "gene_name": "ENSG00000005187",
+      "annotation": {},
+      "reactions": [
+        "FACOAL40im"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000149925",
+      "gene_name": "ENSG00000149925",
+      "annotation": {},
+      "reactions": [
+        "FBA"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000109107",
+      "gene_name": "ENSG00000109107",
+      "annotation": {},
+      "reactions": [
+        "FBA"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000165140",
+      "gene_name": "ENSG00000165140",
+      "annotation": {},
+      "reactions": [
+        "FBP"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000130957",
+      "gene_name": "ENSG00000130957",
+      "annotation": {},
+      "reactions": [
+        "FBP"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000091483",
+      "gene_name": "ENSG00000091483",
+      "annotation": {},
+      "reactions": [
+        "FUM",
+        "FUMm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000103876",
+      "gene_name": "ENSG00000103876",
+      "annotation": {},
+      "reactions": [
+        "FUMAC"
+      ]
+    },
+    {
+      "gene_id": "Unknown",
+      "gene_name": "Unknown",
+      "annotation": {},
+      "reactions": [
+        "FUMtmB_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000160211",
+      "gene_name": "ENSG00000160211",
+      "annotation": {},
+      "reactions": [
+        "G6PDH2r"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131482",
+      "gene_name": "ENSG00000131482",
+      "annotation": {},
+      "reactions": [
+        "G6PPer"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000111640",
+      "gene_name": "ENSG00000111640",
+      "annotation": {},
+      "reactions": [
+        "GAPD"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000142657",
+      "gene_name": "ENSG00000142657",
+      "annotation": {},
+      "reactions": [
+        "GND"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000156515",
+      "gene_name": "ENSG00000156515",
+      "annotation": {},
+      "reactions": [
+        "HEX1"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000160883",
+      "gene_name": "ENSG00000160883",
+      "annotation": {},
+      "reactions": [
+        "HEX1"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000159399",
+      "gene_name": "ENSG00000159399",
+      "annotation": {},
+      "reactions": [
+        "HEX1"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000106633",
+      "gene_name": "ENSG00000106633",
+      "annotation": {},
+      "reactions": [
+        "HEX1"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000111716",
+      "gene_name": "ENSG00000111716",
+      "annotation": {},
+      "reactions": [
+        "LDH_L"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000100577",
+      "gene_name": "ENSG00000100577",
+      "annotation": {},
+      "reactions": [
+        "MACACI"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131844",
+      "gene_name": "ENSG00000131844",
+      "annotation": {},
+      "reactions": [
+        "MCCCrm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000078070",
+      "gene_name": "ENSG00000078070",
+      "annotation": {},
+      "reactions": [
+        "MCCCrm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000014641",
+      "gene_name": "ENSG00000014641",
+      "annotation": {},
+      "reactions": [
+        "MDH"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000146701",
+      "gene_name": "ENSG00000146701",
+      "annotation": {},
+      "reactions": [
+        "MDHm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000148090",
+      "gene_name": "ENSG00000148090",
+      "annotation": {},
+      "reactions": [
+        "MGCHrm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000091140",
+      "gene_name": "ENSG00000091140",
+      "annotation": {},
+      "reactions": [
+        "PDHm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000131828",
+      "gene_name": "ENSG00000131828",
+      "annotation": {},
+      "reactions": [
+        "PDHm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000168291",
+      "gene_name": "ENSG00000168291",
+      "annotation": {},
+      "reactions": [
+        "PDHm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000150768",
+      "gene_name": "ENSG00000150768",
+      "annotation": {},
+      "reactions": [
+        "PDHm"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000124253",
+      "gene_name": "ENSG00000124253",
+      "annotation": {},
+      "reactions": [
+        "PEPCK"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000152556",
+      "gene_name": "ENSG00000152556",
+      "annotation": {},
+      "reactions": [
+        "PFK"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000105220",
+      "gene_name": "ENSG00000105220",
+      "annotation": {},
+      "reactions": [
+        "PGI"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000102144",
+      "gene_name": "ENSG00000102144",
+      "annotation": {},
+      "reactions": [
+        "PGK"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000130313",
+      "gene_name": "ENSG00000130313",
+      "annotation": {},
+      "reactions": [
+        "PGL"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000171314",
+      "gene_name": "ENSG00000171314",
+      "annotation": {},
+      "reactions": [
+        "PGM"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000164708",
+      "gene_name": "ENSG00000164708",
+      "annotation": {},
+      "reactions": [
+        "PGM"
+      ]
+    },
+    {
+      "gene_id": "Non-Enzymatic",
+      "gene_name": "Non-Enzymatic",
+      "annotation": {},
+      "reactions": [
+        "PPD2CSPc_MitoCore"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000067225",
+      "gene_name": "ENSG00000067225",
+      "annotation": {},
+      "reactions": [
+        "PYK",
+        "r0122"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000235376",
+      "gene_name": "ENSG00000235376",
+      "annotation": {},
+      "reactions": [
+        "RPE"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000153574",
+      "gene_name": "ENSG00000153574",
+      "annotation": {},
+      "reactions": [
+        "RPI"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000177156",
+      "gene_name": "ENSG00000177156",
+      "annotation": {},
+      "reactions": [
+        "TALA"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000163931",
+      "gene_name": "ENSG00000163931",
+      "annotation": {},
+      "reactions": [
+        "TKT1",
+        "TKT2"
+      ]
+    },
+    {
+      "gene_id": "ENSG00000111669",
+      "gene_name": "ENSG00000111669",
+      "annotation": {},
+      "reactions": [
+        "TPI"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+Subsystem,Reaction ID,Reaction,Gene Count,PDB Count
+Acetate production,ACOAHi,H2O + Acetyl-CoA --> H + CoA + Acetate,1,3
+Alcohol metabolism,ACS,ATP + CoA + Acetate --> Acetyl-CoA + AMP + Diphosphate,1,0
+Alcohol metabolism,ACSm,ATP + CoA + Acetate --> Acetyl-CoA + AMP + Diphosphate,1,9
+Butanoate metabolism,FACOAL40im,ATP + CoA + Butanoic acid --> AMP + Diphosphate + Butanoyl-CoA,2,0
+Carnitine shuttle,FACOAL160i,ATP + CoA + Hexadecanoic acid --> AMP + Diphosphate + Palmitoyl-CoA,7,0
+Cytosolic misc,FUM,H2O + Fumarate --> (S)-Malate,1,7
+Electron transport chain CI,CI_MitoCore,H + 3.996 Proton Motive Force + NADH + 0.999 Ubiquinone + 0.002 Oxygen --> 3.996 Proton Motive Force + NAD + 0.999 Ubiquinol + 0.002 O2.-,45,38
+Electron transport chain CII,CII_MitoCore,Ubiquinone + Succinate --> Ubiquinol + Fumarate,3,8
+Electron transport chain CIV,CIV_MitoCore,Oxygen + 4 Ferrocytochrome c + 8 Proton Motive Force --> 2 H2O + 4 Proton Motive Force + 4 Ferricytochrome c,19,3
+Electron transport chain CV,CV_MitoCore,H + 2.7 Proton Motive Force + ADP + Orthophosphate --> H2O + 2.7 Proton Motive Force + ATP,18,18
+FA synthesis - cytosolic,ACOATA,Acetyl-CoA + acyl carrier protein --> CoA + Acetyl-ACP,1,33
+Fatty acid elongation in mitochondria,ACOT2_MitoCore,Palmitoyl-CoA + H2O --> CoA + Hexadecanoic acid,1,1
+Gluconeogenesis,FBP,"H2O + D-Fructose 1,6-bisphosphate --> Orthophosphate + D-Fructose 6-phosphate",2,64
+Gluconeogenesis,G6PPer,H2O + D-Glucose 6-phosphate --> Orthophosphate + D-Glucose,1,2
+Gluconeogenesis,PEPCK,Oxaloacetate + GTP --> CO2 + Phosphoenolpyruvate + GDP,1,7
+Glycolysis,HEX1,ATP + D-Glucose --> H + ADP + D-Glucose 6-phosphate,4,50
+Glycolysis,PFK,"ATP + D-Fructose 6-phosphate --> H + ADP + D-Fructose 1,6-bisphosphate",1,1
+Glycolysis,r0122,H + Phosphoenolpyruvate + GDP --> Pyruvate + GTP,1,56
+Glycolysis/gluconeogenesis,ENO,2-Phospho-D-glycerate --> H2O + Phosphoenolpyruvate,3,25
+Glycolysis/gluconeogenesis,FBA,"D-Fructose 1,6-bisphosphate --> Glycerone phosphate + D-Glyceraldehyde 3-phosphate",2,9
+Glycolysis/gluconeogenesis,GAPD,Orthophosphate + NAD + D-Glyceraldehyde 3-phosphate --> H + NADH + 3-Phospho-D-glyceroyl phosphate,1,20
+Glycolysis/gluconeogenesis,LDH_L,NAD + (S)-Lactate --> Pyruvate + NADH + H,1,5
+Glycolysis/gluconeogenesis,PGI,D-Glucose 6-phosphate --> D-Fructose 6-phosphate,1,13
+Glycolysis/gluconeogenesis,PGK,ATP + 3-Phospho-D-glycerate --> ADP + 3-Phospho-D-glyceroyl phosphate,1,26
+Glycolysis/gluconeogenesis,PGM,2-Phospho-D-glycerate --> 3-Phospho-D-glycerate,2,23
+Glycolysis/gluconeogenesis,PYK,Phosphoenolpyruvate + ADP + H --> ATP + Pyruvate,1,56
+Glycolysis/gluconeogenesis,TPI,Glycerone phosphate --> D-Glyceraldehyde 3-phosphate,1,29
+Leucine degradation,MCCCrm,ATP + HCO3- + 3-Methylcrotonyl-CoA --> H + ADP + Orthophosphate + 3-Methylglutaconyl-CoA,2,15
+Leucine degradation,MGCHrm,H2O + 3-Methylglutaconyl-CoA --> (S)-3-Hydroxy-3-methylglutaryl-CoA,1,3
+Lysine degradation (L-pipecolate pathway),PPD2CSPc_MitoCore,6-Amino-2-oxohexanoate --> H2O + delta1-Piperideine-2-carboxylate,1,0
+Malate aspartate shuttle,MDH,NAD + (S)-Malate --> H + NADH + Oxaloacetate,1,2
+Mitochondrial transporters - uncharacterised,FUMtmB_MitoCore,Fumarate + 1.64 Proton Motive Force --> Fumarate + 1.64 Proton Motive Force,1,0
+Pentose phosphate pathway,G6PDH2r,"NADP + D-Glucose 6-phosphate --> H + NADPH + D-Glucono-1,5-lactone 6-phosphate",1,24
+Pentose phosphate pathway,GND,NADP + 6-Phospho-D-gluconate --> NADPH + CO2 + D-Ribulose 5-phosphate,1,4
+Pentose phosphate pathway,PGL,"H2O + D-Glucono-1,5-lactone 6-phosphate --> H + 6-Phospho-D-gluconate",1,0
+Pentose phosphate pathway,RPE,D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate,1,0
+Pentose phosphate pathway,RPI,D-Ribose 5-phosphate --> D-Ribulose 5-phosphate,1,0
+Pentose phosphate pathway,TALA,D-Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate --> D-Fructose 6-phosphate + D-Erythrose 4-phosphate,1,1
+Pentose phosphate pathway,TKT1,D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> D-Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate,1,13
+Pentose phosphate pathway,TKT2,D-Xylulose 5-phosphate + D-Erythrose 4-phosphate --> D-Glyceraldehyde 3-phosphate + D-Fructose 6-phosphate,1,13
+Purine Nucleotide Cycle,ADSL1,"N6-(1,2-Dicarboxyethyl)-AMP --> AMP + Fumarate",1,4
+Reductive carboxylation,ACONT,Citrate --> Isocitrate,1,2
+TCA cycle,ACONTm,Citrate --> Isocitrate,1,0
+TCA cycle,CSm,H2O + Acetyl-CoA + Oxaloacetate --> H + CoA + Citrate,1,3
+TCA cycle,FUMm,H2O + Fumarate --> (S)-Malate,1,7
+TCA cycle,MDHm,NAD + (S)-Malate --> H + NADH + Oxaloacetate,1,7
+TCA cycle,PDHm,NAD + Pyruvate + CoA --> NADH + CO2 + Acetyl-CoA,4,39
+Tyrosine degradation,FUMAC,H2O + 4-Fumarylacetoacetate --> H + Acetoacetate + Fumarate,1,0
+Tyrosine degradation,MACACI,4-Maleylacetoacetate --> 4-Fumarylacetoacetate,1,0
+Urea Cycle,ARGSL,N-(L-Arginino)succinate --> Fumarate + L-Arginine,1,2
